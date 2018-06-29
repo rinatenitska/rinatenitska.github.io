@@ -2,80 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Weather app</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header class="container">
-    <div class="row">
-        <div class="col-xs-5 logo">
-            <img src="img/logo.png">
+<div class="container">
+    <header>
+        <div class="row">
+            <div class="logo col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                <img src="img/logo.png">
+            </div>
+            <div class="form col-xs-12 col-sm-7 col-md-7 col-lg-7">
+                <form id="search">
+                    <input type="text" placeholder="Add your location">
+                    <input type="submit" value="Search">
+                </form>
+            </div>
         </div>
-        <div class="col-xs-7 form">
-            <form>
-                <input type="text" placeholder="Add your location">
-                <input type="button" value="Search">
-            </form>
+    </header>
+    <section class="main">
+        <div class="row">
+            <div class="col-xs-6">
+                <h1 id="location">City</h1>
+                <h2 id="date">26.06.2018</h2>
+                <h2 id="temp">+20 <sup>o</sup>C</h2>
+            </div>
+            <div class="col-xs-6">
+                <ul>
+                    <li>
+                        <ul>
+                            <li id="humidity">50%</li>
+                            <li><img src="img/drop.png"></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li id="wind">E, 20 m/s</li>
+                            <li><img src="img/vane.png"></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li id="pressure">1010 kPa</li>
+                            <li><img src="img/gauge.png"></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</header>
-<section id="main" class="container">
-    <div class="row">
-        <div id="parameters" class="col-xs-7 col-sm-8 col-md-7 col-lg-7">
-            <h1 id="location">Some City</h1>
-            <h2 id="date">25.06.2018</h2>
-            <ul class="row">
-                <li class="col-xs-12 item">
-                    <ul class="row">
-                        <li class="col-xs-2"><img src="img/drop.png"></li>
-                        <li id="humidity" class="col-xs-8">50%</li>
-                    </ul>
-                </li>
-                <li class="col-xs-12 item">
-                    <ul class="row">
-                        <li class="col-xs-2"><img src="img/gauge.png"></li>
-                        <li id="pressure" class="col-xs-8">1010 hPa</li>
-                    </ul>
-                </li>
-                <li class="col-xs-12 item">
-                    <ul class="row">
-                        <li class="col-xs-2"><img src="img/vane.png"></li>
-                        <li id="wind" class="col-xs-8">East, 20 km/h</li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="clear"></div>
+    </section>
+    <section class="future">
+        <div class="row">
+            <div class="mini-plate col-xs-3">
+                <img src="img/sun.png">
+                <h3>27.06</h3>
+                <h4>+20 <sup>o</sup>C</h4>
+            </div>
+            <div class="mini-plate col-xs-3">
+                <img src="img/sun.png">
+                <h3>27.06</h3>
+                <h4>+20 <sup>o</sup>C</h4>
+            </div>
+            <div class="mini-plate col-xs-3">
+                <img src="img/sun.png">
+                <h3>27.06</h3>
+                <h4>+20 <sup>o</sup>C</h4>
+            </div>
+            <div class="mini-plate col-xs-3">
+                <img src="img/sun.png">
+                <h3>27.06</h3>
+                <h4>+20 <sup>o</sup>C</h4>
+            </div>
         </div>
-        <div id="current-weather" class="col-xs-5 col-sm-4 col-md-5 col-lg-5">
-            <h2 id="temp">+20 <sup>o</sup>C</h2>
-        </div>
-    </div>
-</section>
-<section id="future" class="container">
-    <div class="row">
-        <div class="col-xs-3 mini-plate">
-            <img src="img/sun.png">
-            <h3>26.06</h3>
-            <h4>+20 <sup>o</sup>C</h4>
-        </div>
-        <div class="col-xs-3 mini-plate">
-            <img src="img/sun.png">
-            <h3>27.06</h3>
-            <h4>+20 <sup>o</sup>C</h4>
-        </div>
-        <div class="col-xs-3 mini-plate">
-            <img src="img/sun.png">
-            <h3>28.06</h3>
-            <h4>+20 <sup>o</sup>C</h4>
-        </div>
-        <div class="col-xs-3 mini-plate">
-            <img src="img/sun.png">
-            <h3>29.06</h3>
-            <h4>+20 <sup>o</sup>C</h4>
-        </div>
-        <div class="clear"></div>
-    </div>
-</section>
+    </section>
+</div>
 </body>
 </html>
