@@ -1,5 +1,6 @@
 body {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  min-width: 300px; }
   body ul {
     list-style: none;
     padding: 0; }
