@@ -1,25 +1,24 @@
-body ul {
-  list-style: none;
-  padding: 0; }
-  body ul li {
+body {
+  overflow-x: hidden; }
+  body ul {
+    list-style: none;
     padding: 0; }
-
-body h1, body h2 {
-  margin: 40px 0; }
-  @media screen and (max-width: 768px) {
-    body h1, body h2 {
-      margin: 20px 0;
-      font-size: 32px; } }
-
-body h2 {
-  font-weight: lighter; }
-
-body h3, body h4 {
-  font-weight: lighter;
-  color: #bbe4f6; }
-  @media screen and (max-width: 480px) {
-    body h3, body h4 {
-      font-size: 18px; } }
+    body ul li {
+      padding: 0; }
+  body h1, body h2 {
+    margin: 40px 0; }
+    @media screen and (max-width: 768px) {
+      body h1, body h2 {
+        margin: 20px 0;
+        font-size: 32px; } }
+  body h2 {
+    font-weight: lighter; }
+  body h3, body h4 {
+    font-weight: lighter;
+    color: #bbe4f6; }
+    @media screen and (max-width: 480px) {
+      body h3, body h4 {
+        font-size: 18px; } }
 
 header {
   padding: 20px 0; }
@@ -157,15 +156,14 @@ header {
       margin: 0;
       padding: 0;
       text-shadow: 0 0 10px black;
-      right: 10px; }
-      #main #current-weather #temp h2 {
-        font-size: 56px; }
-        @media screen and (max-width: 768px) {
-          #main #current-weather #temp h2 {
-            font-size: 42px; } }
-        @media screen and (max-width: 480px) {
-          #main #current-weather #temp h2 {
-            font-size: 30px; } }
+      right: 10px;
+      font-size: 56px; }
+      @media screen and (max-width: 768px) {
+        #main #current-weather #temp {
+          font-size: 42px; } }
+      @media screen and (max-width: 480px) {
+        #main #current-weather #temp {
+          font-size: 30px; } }
 
 #future .mini-plate {
   background-color: #0d568c;
