@@ -11,6 +11,10 @@ body {
       body h1, body h2 {
         margin: 20px 0;
         font-size: 32px; } }
+    @media screen and (max-width: 768px) {
+      body h1, body h2 {
+        margin: 20px 0;
+        font-size: 28px; } }
   body h2 {
     font-weight: lighter; }
   body h3, body h4 {
