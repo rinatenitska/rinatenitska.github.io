@@ -8,7 +8,7 @@ $("#city").on("change", function () {
 var json;
 function currentWeather() {
     var key = "327f72fab114ed047d69b86da9f3afc9";
-    var url = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + key;
+    var url = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + key;
     $.ajax({
         type: "GET",
         url: url,
@@ -133,7 +133,7 @@ function currentWeather() {
 }
 function forecast() {
     var key = "327f72fab114ed047d69b86da9f3afc9";
-    var url = "http://api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&appid=" + key;
+    var url = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&appid=" + key;
     $.ajax({
         type: "GET",
         url: url,
