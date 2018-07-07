@@ -10,7 +10,7 @@ function currentWeather() {
     var key = "327f72fab114ed047d69b86da9f3afc9";
     var url = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + key;
     $.ajax({
-        type: "POST",
+        type: "GET",
         url: url,
         dataType: "json",
         success: function (objData) {
@@ -135,7 +135,7 @@ function forecast() {
     var key = "327f72fab114ed047d69b86da9f3afc9";
     var url = "http://api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&appid=" + key;
     $.ajax({
-        type: "POST",
+        type: "GET",
         url: url,
         dataType: "json",
         success: function (objData) {
