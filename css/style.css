@@ -53,6 +53,9 @@ header {
           margin: 20px auto; } }
       header .row .form form {
         width: 100%; }
+        header .row .form form label {
+          font-size: 16px;
+          font-weight: lighter; }
         header .row .form form input {
           border: none;
           outline: none;
@@ -62,8 +65,8 @@ header {
           width: 70%; }
 
 .main {
-  padding: 50px 0;
-  margin: 65px 0;
+  padding: 55px 0;
+  margin: 55px 0;
   background: center no-repeat;
   background-size: contain;
   text-shadow: 0 0 8px black; }
@@ -168,17 +171,30 @@ header {
     transform: translateX(0%);
     visibility: visible; } }
 
+.future #back {
+  background-color: #0d568c;
+  padding: 15px;
+  border-radius: 10px;
+  width: 23%;
+  text-align: center;
+  visibility: hidden;
+  cursor: pointer; }
+  .future #back:hover {
+    background-color: #0d65a8; }
+
 .future .mini-plate {
   background-color: #0d568c;
   padding: 40px 5px;
   text-align: center;
   margin: 1%;
   width: 23%;
-  border-radius: 10px; }
+  border-radius: 10px;
+  cursor: pointer; }
   @media screen and (max-width: 480px) {
     .future .mini-plate {
       padding: 15px 5px; } }
-
-@media screen and (max-width: 480px) {
-  .future img {
-    width: 95%; } }
+  .future .mini-plate p {
+    display: none; }
+  @media screen and (max-width: 480px) {
+    .future .mini-plate img {
+      width: 95%; } }

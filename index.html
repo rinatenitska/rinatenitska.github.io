@@ -20,12 +20,15 @@
     <header>
         <div class="row">
             <div class="logo col-xs-12 col-sm-5 col-md-5 col-lg-5">
-                <img src="img/logo.png">
+                <img id="logo" src="img/logo.png">
             </div>
             <div class="form col-xs-12 col-sm-7 col-md-7 col-lg-7">
                 <form id="search">
                     <input id="city" type="text" placeholder="Add your location">
                     <input type="button" value="Search">
+                    <label for="city">
+                        Example: <b>London</b> or <b>London, GB</b>.
+                    </label>
                 </form>
             </div>
         </div>
@@ -62,6 +65,7 @@
         </div>
     </section>
     <section class="future">
+        <div id="back">Current weather</div>
         <div class="row">
             <div class="mini-plate col-xs-3">
                 <img src="img/thunderstorm-icon.png">
@@ -81,6 +85,7 @@
             <div class="mini-plate col-xs-3">
                 <img src="img/thunderstorm-icon.png">
                 <h3>30.06</h3>
+                <h4>+20 <sup>o</sup>C</h4>
                 <h4>+20 <sup>o</sup>C</h4>
             </div>
         </div>
