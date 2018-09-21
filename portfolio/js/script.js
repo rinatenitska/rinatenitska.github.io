@@ -50,9 +50,23 @@ function photoblock() {
                     var big_photo_url = $(this).find(".back").css("background-image").slice(5, -2);
                     $(".big_photo img").attr("src", big_photo_url);
                     var height = $(".photo_content").height() - $(".big_photo img").height();
-                    $(".big_photo figure").css("padding-top", height/2);
+                    var figureHeight = $(".photo_content").height()/2 - $(".big_photo img").height();
                     var windowHeight = $(window).innerHeight() - $(".photo_content").height();
+                    if ($(window).innerWidth() <= 768) {
+                        $(".big_photo figure").css("padding-top", figureHeight/2);
+                    } else {
+                        $(".big_photo figure").css("padding-top", height/2);
+                    }
                     $(".big_photo").css("padding-top", windowHeight/2);
+                    number = Number($("#pages li.active").text());
+                    for (var b = (number - 1) * 9; b < number * 9; b++) {
+                        if (b < objData.length) {
+                            var bigPhoto = $(".big_photo img").attr("src");
+                            if (bigPhoto.match(objData[b].url)) {
+                                $(".big_photo .description").text(objData[b].description);
+                            }
+                        }
+                    }
                     $(".big_photo").on("click", function () {
                         $(".big_photo").remove();
                     })
@@ -85,8 +99,13 @@ function photoblock() {
                 var big_photo_url = $(this).find(".back").css("background-image").slice(5, -2);
                 $(".big_photo img").attr("src", big_photo_url);
                 var height = $(".photo_content").height() - $(".big_photo img").height();
-                $(".big_photo figure").css("padding-top", height/2);
+                var figureHeight = $(".photo_content").height()/2 - $(".big_photo img").height();
                 var windowHeight = $(window).innerHeight() - $(".photo_content").height();
+                if ($(window).innerWidth() <= 768) {
+                    $(".big_photo figure").css("padding-top", figureHeight/2);
+                } else {
+                    $(".big_photo figure").css("padding-top", height/2);
+                }
                 $(".big_photo").css("padding-top", windowHeight/2);
                 for (var j = 0; j < $(".item").length; j++) {
                     if ($(this)[0] === $(".item")[j]) {
@@ -248,7 +267,6 @@ $(".category").on("click", function () {
 $(window).on("load", function () {
     photoblock();
     slideshow();
-    console.log($(window).innerWidth())
 });
 $(".category:first-child").on("click", function () {
     photoblock();
