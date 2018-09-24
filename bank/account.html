@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank of Fairy</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../../assets/js/html5shiv.js"></script>
+    <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="account">
+        <div class="acc_menu">
+            <ul>
+                <li id="acc_info" style="color: #c11039" title="Профіль" onclick="user_details()">
+                    <a href="#profile">
+                        <i class="fa fa-2x fa-user" aria-hidden="true"></i>
+                        <p>Профіль</p>
+                    </a>
+                </li>
+                <li id="wallet_info" title="Рахунки">
+                    <a href="#wallet">
+                        <i class="fa fa-2x fa-wallet" aria-hidden="true"></i>
+                        <p>Рахунки</p>
+                    </a>
+                </li>
+                <li id="cards_btn" title="Картки">
+                    <a href="#cards">
+                        <i class="fa fa-2x fa-credit-card" aria-hidden="true"></i>
+                        <p>Картки</p>
+                    </a>
+                </li>
+                <li id="trans_btn" title="Перевід грошей">
+                    <a href="#transfer">
+                        <i class="fa fa-2x fa-hand-holding-usd" aria-hidden="true"></i>
+                        <p>Переводи</p>
+                    </a>
+                </li>
+                <li id="credit_btn" title="Кредит">
+                    <a href="#credit">
+                        <i class="fa fa-2x fa-calculator" aria-hidden="true"></i>
+                        <p>Кредит</p>
+                    </a>
+                </li>
+                <li title="Вихід">
+                    <a href="/logout">
+                        <i class="fa fa-2x fa-sign-out-alt" aria-hidden="true"></i>
+                        <p>Вихід</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="acc_details">
+            <div style="display: block" class="profile acc_item">
+                <table>
+                    <tr>
+                        <td>Клієнт:</td>
+                        <td id="client_name"></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td id="client_email"></td>
+                    </tr>
+                    <tr>
+                        <td>Адреса:</td>
+                        <td id="client_address"></td>
+                    </tr>
+                    <tr>
+                        <td>Телефон:</td>
+                        <td id="client_phone"></td>
+                    </tr>
+                </table>
+                <a href="prof_redact.html" class="buttons">Редагувати</a>
+            </div>
+            <div class="wallet acc_item">
+                <div class="buttons pull-left account_create">Відкрити новий рахунок</div>
+                <div class="clearfix"></div>
+                <div id="wallet_id"></div>
+                <div id="account_info">
+                    <table>
+                        <tr>
+                            <td>Рахунок:</td>
+                            <td id="wallet_num"></td>
+                        </tr>
+                        <tr>
+                            <td>Власник:</td>
+                            <td id="wallet_owner"></td>
+                        </tr>
+                        <tr>
+                            <td>Сума на рахунку:</td>
+                            <td id="wallet_amount"></td>
+                        </tr>
+                        <tr>
+                            <td>Валюта:</td>
+                            <td id="wallet_currency"></td>
+                        </tr>
+                        <tr>
+                            <td>Прикріплені картки:</td>
+                            <td id="wallet_cards"></td>
+                        </tr>
+                    </table>
+                    <div class="buttons pull-left account_trans" onclick="accounts_transactions()">Виписка операцій</div>
+                    <div class="buttons pull-right acc_adjunction">Поповнити рахунок</div>
+                    <div class="clearfix"></div>
+                    <div id="account_adj">
+                        <form id="acc_adj" name="acc_adj">
+                            <input id="acc_adj_num" name="acc_adj_num">
+                            <input id="acc_adj_amount" class="money" name="acc_adj_amount" placeholder="Сума">
+                            <input class="buttons" type="submit" value="Поповнити">
+                        </form>
+                    </div>
+                    <div class="acc_card_create">
+                    </div>
+                </div>
+                <div class="wallet-empty">
+                    <h2>Відкрити новий рахунок</h2>
+                    <p>Оберіть валюту та введіть суму.</p>
+                    <form id="account_create" name="account_create">
+                        <label>Оберіть валюту</label>
+                        <select id="acc_new_currency" name="acc_new_currency" title="Валюта"></select>
+                        <input id="acc_new_amount" class="money" name="acc_new_amount" placeholder="Сума на рахунку">
+                        <input class="buttons" type="submit" value="Продовжити">
+                    </form>
+                </div>
+            </div>
+            <div class="cards cards_acc acc_item">
+                <div id="wallet_card_num"></div>
+                <div class="clearfix"></div>
+                <div id="card_item"></div>
+                <div id="cards_trans"></div>
+                <div class="clearfix"></div>
+                <div id="cards_adj">
+                    <form id="card_adj" name="card_adj">
+                        <input id="card_adj_num" name="card_adj_num">
+                        <input id="card_adj_amount" class="money" name="card_adj_amount" placeholder="Сума">
+                        <input type="submit" value="Поповнити">
+                    </form>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="transfer acc_item">
+                <form id="transfer" name="transfer">
+                    <label for="account">З рахунку</label>
+                    <select id="account" name="account">
+                    </select>
+                    <label for="to_account">На рахунок</label>
+                    <input id="to_account" name="to_account">
+                    <label for="mfo">МФО банку</label>
+                    <input id="mfo" name="mfo">
+                    <label for="bank">Назва банку</label>
+                    <input id="bank" name="bank">
+                    <label for="name">ПІБ/Назва</label>
+                    <input id="name" name="name">
+                    <label for="egrpou">ІПН/ЄДРПОУ</label>
+                    <input id="egrpou" name="egrpou">
+                    <label for="transfer_sum">Сума переказу</label>
+                    <input id="transfer_sum" class="money" name="transfer_sum">
+                    <label for="descr">Призначення платежу</label>
+                    <textarea id="descr" name="descr"></textarea>
+                    <input type="submit" value="Далі">
+                </form>
+            </div>
+            <div class="credit acc_item">
+                <div id="credit_id">
+                </div>
+                <div id="credit_info">
+                    <table>
+                        <tr>
+                            <td>Рахунок:</td>
+                            <td id="credit_num"></td>
+                        </tr>
+                        <tr>
+                            <td>Власник:</td>
+                            <td id="credit_owner"></td>
+                        </tr>
+                        <tr>
+                            <td>Сума кредиту:</td>
+                            <td id="credit_limit"></td>
+                        </tr>
+                        <tr>
+                            <td>До сплати:</td>
+                            <td id="credit_amount"></td>
+                        </tr>
+                        <tr>
+                            <td>На рахунку:</td>
+                            <td id="credit_money"></td>
+                        </tr>
+                        <tr>
+                            <td>Термін виплати:</td>
+                            <td id="credit_durability"></td>
+                        </tr>
+                        <tr>
+                            <td>Щомісячний платіж:</td>
+                            <td id="credit_month_pay"></td>
+                        </tr>
+                        <tr>
+                            <td>Валюта:</td>
+                            <td id="credit_currency"></td>
+                        </tr>
+                        <tr>
+                            <td>Прикріплені картки:</td>
+                            <td id="credit_cards"></td>
+                        </tr>
+                    </table>
+                    <div class="buttons pull-left credit_trans" onclick="credit_transactions()">Платежі по кредиту</div>
+                    <div class="buttons pull-right cred_adjunction">Поповнити рахунок</div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="credit-empty">
+                    <p>Оформити новий кредит</p>
+                    <a href="credit_offer.html" class="buttons">Підібрати кредит</a>
+                </div>
+                <div id="credit_adj">
+                    <form id="cred_adj" name="cred_adj">
+                        <input id="cred_adj_num" name="cred_adj_num">
+                        <input id="cred_adj_amount" class="money" name="acc_adj_amount" placeholder="Сума">
+                        <input class="buttons" type="submit" value="Поповнити">
+                    </form>
+                </div>
+                <div class="credit_card_create">
+                    <form id="credit_card_create" name="credit_card_create">
+                        <label for="credit_new_card">Створити картку для рахунку: </label>
+                        <input id="credit_new_card" name="credit_new_card">
+                        <input type="submit" value="Продовжити">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/blocks.js"></script>
+<script>
+    rates();
+    user_details();
+</script>
+</body>
+</html>

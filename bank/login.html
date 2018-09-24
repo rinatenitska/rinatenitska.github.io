@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank of Fairy</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../../assets/js/html5shiv.js"></script>
+    <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<section class="greet">
+    <div class="container">
+        <a href="index.html">
+            <img src="img/logo_white.png">
+        </a>
+            <h2>
+                Вітаємо в<br>
+                інтернет-банкінгу!
+            </h2>
+    </div>
+</section>
+<section class="login">
+    <div class="container">
+        <div class="button">
+            <div id="log" class="text-right active col-xs-6">Авторизація</div>
+            <div id="reg" class="col-xs-6">Реєстрація</div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="log">
+            <form id="login" name="login">
+                <input placeholder="Номер телефону" id="phone" name="phone">
+                <input type="password" name="password" id="password" placeholder="Пароль">
+                <input type="submit" value="Увійти">
+            </form>
+        </div>
+        <div class="reg">
+            <form id="regist" name="regist">
+                <input id="name" name="name" placeholder="Ім'я" required>
+                <input id="surname" name="surname" placeholder="Прізвище" required>
+                <input type="tel" id="phone_num" name="phone" placeholder="380ХХХХХХХХХ" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input name="ipn" id="ipn"  placeholder="ІПН" required>
+                <input name="address" placeholder="Адреса" required>
+                <input type="password" name="password" placeholder="Пароль" required>
+                <input type="submit" value="Зареєструватися">
+            </form>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

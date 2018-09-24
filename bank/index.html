@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank of Fairy</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../../assets/js/html5shiv.js"></script>
+    <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <img class="text-left" src="img/logo.png">
+                <a class="text-right onlinebank log_btn" href="account.html#profile">Інтернет-банкінг</a>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="main_info">
+            <div class="container">
+                <h1>ЗРУЧНИЙ БАНК<br>У ВАШІЙ КИШЕНІ</h1>
+                <p>Створити новий рахунок або отримати кредит тепер надзвичайно просто.
+                    Користуйтесь всіма можливостями сучасного банку, не виходячи з дому!</p>
+                <a class="log_btn" href="account.html#profile">Інтернет-банкінг</a>
+            </div>
+        </div>
+        <div class="currency text-center">
+            <div class="container">
+                <marquee></marquee>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="function text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-4 item">
+                        <a id="wall" href="account.html#wallet">
+                            <i class="fas fa-credit-card fa-2x" aria-hidden="true"></i>
+                            <p>Рахунок</p>
+                        </a>
+                    </div>
+                    <div class="col-xs-4 item">
+                        <a id="cred" href="account.html#credit">
+                            <i class="fas fa-calculator fa-2x" aria-hidden="true"></i>
+                            <p>Кредит</p>
+                        </a>
+                    </div>
+                    <div class="col-xs-4 item message">
+                        <a href="#message">
+                            <i class="far fa-question-circle fa-2x" aria-hidden="true"></i>
+                            <p>Помощь</p>
+                        </a>
+                    </div>
+                    <form id="user_message" name="user_message">
+                        <label>Надішліть нам повідомлення, і ми відповімо на всі ваші питання:</label>
+                        <input type="email" name="email" placeholder="Email">
+                        <textarea name="message" rows="7" placeholder="Текст повідомлення"></textarea>
+                        <input type="submit" value="Надіслати">
+                    </form>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="text-left col-xs-5">
+                    <img src="img/tel.png">
+                </div>
+                <div class="text-right col-xs-7 social">
+                    <a href=""><i class="fab fa-facebook-f fa-2x" aria-hidden="true"></i></a>
+                    <a href=""><i class="fab fa-twitter fa-2x" aria-hidden="true"></i></a>
+                    <a href=""><i class="fab fa-youtube fa-2x" aria-hidden="true"></i></a>
+                    <a href=""><i class="fab fa-google-plus-g fa-2x" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="bottom">
+            <div class="container">
+                <p class="col-xs-6">© 2018 Bank of Fairy</p>
+                <p class="col-xs-6 text-right">Anton Ignatov & Irina Tenitska</p>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </footer>
+<script type="text/javascript" src="js/script.js"></script>
+<script>
+    rates();
+</script>
+</body>
+</html>

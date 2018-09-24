@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank of Fairy</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../../assets/js/html5shiv.js"></script>
+    <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<section class="acc_menu">
+    <ul>
+        <li class="sub_menu" title="Профіль">
+            <a href="account.html#profile">
+                <i class="fa fa-2x fa-user" aria-hidden="true"></i>
+                <p>Профіль</p>
+            </a>
+        </li>
+        <li class="sub_menu" title="Рахунки">
+            <a href="account.html#wallet">
+                <i class="fa fa-2x fa-wallet" aria-hidden="true"></i>
+                <p>Рахунки</p>
+            </a>
+        </li>
+        <li class="sub_menu" title="Картки">
+            <a href="account.html#cards">
+                <i class="fa fa-2x fa-credit-card" aria-hidden="true"></i>
+                <p>Картки</p>
+            </a>
+        </li>
+        <li class="sub_menu" title="Перевід грошей">
+            <a href="account.html#transfer">
+                <i class="fa fa-2x fa-hand-holding-usd" aria-hidden="true"></i>
+                <p>Переводи</p>
+            </a>
+        </li>
+        <li class="sub_menu" title="Кредит">
+            <a href="account.html#credit">
+                <i class="fa fa-2x fa-calculator" aria-hidden="true"></i>
+                <p>Кредит</p>
+            </a>
+        </li>
+        <li title="Вихід">
+            <a href="/logout">
+                <i class="fa fa-2x fa-sign-out-alt" aria-hidden="true"></i>
+                <p>Вихід</p>
+            </a>
+        </li>
+    </ul>
+</section>
+<section class="confirmation">
+    <h2>Щось пішло не так...</h2>
+    <div class="has-error bg-danger" id="error_message"></div>
+    <a class="buttons" href="account.html#profile">Повернутися</a>
+</section>
+<script type="text/javascript" src="js/script.js"></script>
+<script>
+    error();
+</script>
+</body>
+</html>
