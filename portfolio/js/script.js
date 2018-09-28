@@ -216,6 +216,15 @@ $(".category").on("click", function () {
                     $(".big_photo figure").css("padding-top", height/2);
                     var windowHeight = $(window).innerHeight() - $(".photo_content").height();
                     $(".big_photo").css("padding-top", windowHeight/2);
+                    number = Number($("#pages li.active").text());
+                    for (var b = (number - 1) * 9; b < number * 9; b++) {
+                        if (b < categoryItem.length) {
+                            var bigPhoto = $(".big_photo img").attr("src");
+                            if (bigPhoto.match(categoryItem[b].url)) {
+                                $(".big_photo .description").text(categoryItem[b].description);
+                            }
+                        }
+                    }
                     $(".big_photo").on("click", function () {
                         $(".big_photo").remove();
                     })
